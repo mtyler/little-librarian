@@ -1,3 +1,25 @@
 library.json
 .vscode/
 .DS_Store
+
+# Python ignores
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg
+*.egg-info/
+dist/
+build/
+*.env
+*.venv
+.env/
+.venv/
+*.log
+*.pot
+*.pyc
+*.coverage
+.coverage.*
+.cache/
+*.mo
+*.so

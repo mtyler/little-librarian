@@ -27,18 +27,19 @@ def display_book_value(isbn):
 
 def print_book_details(book_details):
     if not book_details:
-        print("No details found. Unable to print details.")
+        print("!!WARNING!! No details found. Unable to print details.")
     else:
         print(f"Title: {book_details['details']['title']}")
         print(f"Author: {book_details['details']['authors'][0]['name']}")
         print(f"Publisher: {book_details['details']['publishers'][0]}")
         print(f"Classification: {book_details['details']['lc_classifications']}")
         save_book_details(book_details)
+        display_book_value(book_details['details']['isbn_13'][0])
     print("--------------------------------------------------------")
     
 def save_book_details(book_details):
     if not book_details:
-        print("!!WARNING!! No details found. Unable to save.")
+        print("!!WARNING!! No details found. Unable to save details.")
         return
     db_dir = WORKING_DIR
     file_path = f'{db_dir}/library.json'
@@ -82,7 +83,7 @@ def main():
         isbn = get_input_from_user()
         book_details = fetch_book_details(isbn)
         print_book_details(book_details)
-        display_book_value(isbn)
+        
 
 if __name__ == "__main__":
     main()
