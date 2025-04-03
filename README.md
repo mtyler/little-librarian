@@ -1,6 +1,6 @@
 # Little Librarian
 
-Little Librarian is a simple and efficient library management application designed to help users organize and manage their personal or small-scale libraries with ease.
+Little Librarian is a simple library management application designed to help users organize personal or small-scale libraries with ease.
 
 ## Features
 
