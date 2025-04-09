@@ -34,8 +34,6 @@ def print_book_details(book_details):
         print(f"Publisher: {book_details['details']['publishers'][0]}")
         print(f"Classification: {book_details['details']['lc_classifications']}")
         save_book_details(book_details)
-        display_book_value(book_details['details']['isbn_13'][0])
-    print("--------------------------------------------------------")
     
 def save_book_details(book_details):
     if not book_details:
@@ -83,7 +81,8 @@ def main():
         isbn = get_input_from_user()
         book_details = fetch_book_details(isbn)
         print_book_details(book_details)
-        
+        display_book_value(isbn)
+        print("--------------------------------------------------------")
 
 if __name__ == "__main__":
     main()
